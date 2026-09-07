@@ -190,6 +190,21 @@ async def warning_log(limit: int = 30):
     return docs
 
 
+DOC_PATH = ROOT_DIR / "docs" / "Hotel_Dynamic_Pricing_Simulator_Documentation.docx"
+
+
+@api.get("/docs/documentation")
+async def download_documentation():
+    if not DOC_PATH.exists():
+        raise HTTPException(status_code=404, detail="Documentation not generated")
+    from fastapi.responses import FileResponse
+    return FileResponse(
+        path=str(DOC_PATH),
+        filename=DOC_PATH.name,
+        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    )
+
+
 app.include_router(api)
 app.add_middleware(CORSMiddleware, allow_credentials=True, allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','), allow_methods=["*"], allow_headers=["*"])
 

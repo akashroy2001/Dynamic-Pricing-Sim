@@ -29,6 +29,12 @@ Scenario inputs + 4 shock presets · 365-day seeded forecast + 14-day chart · b
 - **Zone Spotlight**: `Zone.jsx` wrapper (`data-testid=zone-*`, `data-spotlight=on|dim|off`); presenter steps auto-spotlight (price → comparison → guardrails), manual override via chips in the presenter overlay or clicking any panel; spotlighted zone scrolls into view; interactive elements never hijack clicks
 - **Warning Audit Log**: new dashboard tab (`tab-audit-log`) reading `GET /api/warnings/log` — timestamped flags with price + scenario chips, flag/event totals, refresh, amber badge on the tab. Screen-only (excluded from printable strategy sheet) per user choice
 
+## Implemented (2026-06, iteration 3 — project documentation)
+- Generated `Hotel_Dynamic_Pricing_Simulator_Documentation.docx` (15 numbered sections, 11 tables, 13 real app screenshots, TOC field, page-numbered footer) covering executive summary, RM problem context, four-zone walkthrough, full optimizer maths + worked "Concert in Town" example, segment demand model, Monte Carlo, forecast/pace, guardrails + audit log, Gemini 3 Flash layer, Presenter Mode, feature reference, limitations, extensions, glossary
+- Build script `/app/docs/build_doc.py` (python-docx) + captured figures in `/app/docs/img/`; document stored at `/app/backend/docs/`
+- Served via `GET /api/docs/documentation` and downloadable from the header ("Documentation" link, `data-testid=download-documentation-link`)
+- App logic unchanged by this work
+
 ## Backlog
 - P1: Runs history drawer (list saved runs, reload scenario)
 - P2: USD toggle
