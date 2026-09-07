@@ -143,6 +143,25 @@ body::before {
 
 .spotlight { box-shadow: 0 0 0 2px var(--gold), 0 0 40px 6px var(--gold-glow); transition: box-shadow 300ms ease; }
 
+.zone { border-radius: 14px; transition: opacity 320ms ease, filter 320ms ease, box-shadow 320ms ease, transform 320ms ease; }
+.zone-dim { opacity: 0.18; filter: grayscale(0.7) blur(1.5px); pointer-events: none; }
+.zone-on { position: relative; z-index: 50; box-shadow: 0 0 0 2px var(--gold), 0 0 60px 10px var(--gold-glow); transform: scale(1.01); }
+
+.stream-cursor {
+    display: inline-block;
+    width: 7px;
+    height: 1em;
+    margin-left: 3px;
+    vertical-align: -0.12em;
+    background: var(--gold);
+    animation: caret 900ms steps(2, start) infinite;
+}
+@keyframes caret { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.tab-btn { font-family: 'Outfit', sans-serif; border-bottom: 2px solid transparent; color: var(--text-3); transition: color 160ms ease, border-color 160ms ease; }
+.tab-btn:hover { color: var(--text-2); }
+.tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
 .recharts-tooltip-wrapper { outline: none; }
 .custom-tooltip { background: #0B0E14; border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font-size: 12px; }
 

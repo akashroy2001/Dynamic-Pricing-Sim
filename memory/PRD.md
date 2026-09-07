@@ -24,9 +24,16 @@ Scenario inputs + 4 shock presets · 365-day seeded forecast + 14-day chart · b
 - All core features above; tested end-to-end (iteration_1: backend 100%, frontend 100%)
 - Presets: Concert in Town (PARITY flag), Competitor −40%, Off-season Tuesday (FAIRNESS), Fully Booked Weekend (SURGE + PARITY)
 
+## Implemented (2026-06, iteration 2 — tested, frontend 100%)
+- **Streaming Explanation**: client-side typewriter reveal (~16-30ms/word) of the AI rationale, sequential why → risks → alternative, blinking gold caret, `Skip` button, `streaming…` source label (`ExplanationCard.jsx`)
+- **Zone Spotlight**: `Zone.jsx` wrapper (`data-testid=zone-*`, `data-spotlight=on|dim|off`); presenter steps auto-spotlight (price → comparison → guardrails), manual override via chips in the presenter overlay or clicking any panel; spotlighted zone scrolls into view; interactive elements never hijack clicks
+- **Warning Audit Log**: new dashboard tab (`tab-audit-log`) reading `GET /api/warnings/log` — timestamped flags with price + scenario chips, flag/event totals, refresh, amber badge on the tab. Screen-only (excluded from printable strategy sheet) per user choice
+
 ## Backlog
 - P1: Runs history drawer (list saved runs, reload scenario)
-- P1: Streaming LLM text (typewriter) instead of single response
-- P2: Presenter Mode spotlight highlighting of the zone being discussed
-- P2: Warning log view for the "audit trail" Q&A talking point
 - P2: USD toggle
+- P2: Multi-room-type & multi-property support
+- P2: Real competitor pricing via OTA APIs
+- P2: Reinforcement-learning pricing agent
+- P2: Hard policy enforcement (block, not just flag) with sign-off trail
+- P2: Guest booking portal to close the loop

@@ -10,6 +10,7 @@ export const explain = (scenario, optimization, simulation, force = false) =>
   axios.post(`${API}/explain`, { scenario, optimization, simulation, force }).then((r) => r.data);
 export const saveRun = (payload) => axios.post(`${API}/runs`, payload).then((r) => r.data);
 export const listRuns = () => axios.get(`${API}/runs`).then((r) => r.data);
+export const getWarningLog = () => axios.get(`${API}/warnings/log`).then((r) => r.data);
 
 export const inr = (n) => `₹${Math.round(n ?? 0).toLocaleString("en-IN")}`;
 export const lakhs = (n) => `₹${((n ?? 0) / 100000).toFixed(2)} L`;
