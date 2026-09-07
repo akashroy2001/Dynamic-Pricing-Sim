@@ -1,0 +1,130 @@
+{
+  "project_name": "AI Dynamic Pricing & Revenue Management Simulator (Hotel)",
+  "app_type": "dashboard",
+  "theme": "Dark Luxury Hospitality & Executive Analytics",
+  "archetype": "OBSIDIAN & CHAMPAGNE GOLD (Performance Pro & Luxury Fusion)",
+  "colors": {
+    "background_main": "#080A0F",
+    "background_card": "#11151E",
+    "background_card_elevated": "#181E2B",
+    "border_subtle": "#232A3B",
+    "border_active": "#E2B859",
+    "text_primary": "#F8FAFC",
+    "text_secondary": "#94A3B8",
+    "text_muted": "#64748B",
+    "accent_gold": "#E2B859",
+    "accent_gold_glow": "rgba(226, 184, 89, 0.2)",
+    "accent_emerald": "#10B981",
+    "accent_cyan": "#06B6D4",
+    "warning_amber": "#F59E0B",
+    "warning_amber_bg": "rgba(245, 158, 11, 0.12)",
+    "warning_amber_border": "rgba(245, 158, 11, 0.35)",
+    "danger_subtle": "#EF4444",
+    "currency_symbol": "₹"
+  },
+  "typography": {
+    "font_heading": "'Outfit', 'Cabinet Grotesk', sans-serif",
+    "font_body": "'Inter', 'DM Sans', sans-serif",
+    "font_kpi": "'Barlow Condensed', 'Outfit', sans-serif",
+    "font_mono": "'JetBrains Mono', 'Source Code Pro', monospace",
+    "hierarchy": {
+      "kpi_hero": "text-5xl sm:text-6xl font-black tracking-tight text-amber-400 font-mono",
+      "h1_title": "text-2xl sm:text-3xl font-bold text-slate-100 tracking-tight",
+      "h2_section": "text-lg sm:text-xl font-semibold text-amber-200 tracking-wide uppercase text-xs sm:text-sm font-mono",
+      "card_title": "text-base font-semibold text-slate-200",
+      "body_text": "text-sm text-slate-300 leading-relaxed",
+      "caption": "text-xs text-slate-400"
+    }
+  },
+  "layout_structure": {
+    "mode": "Single-screen 3-zone dashboard optimized for live MBA classroom projector presentation",
+    "zones": {
+      "header": {
+        "description": "Sticky top bar with Luxury Hotel Branding ('The Grand Horizon Palace - Mumbai'), live simulator clock, Currency indicator (INR ₹), Presenter Mode toggle with glowing pulse, Strategy Sheet Print button, and Scenario Reset",
+        "container_classes": "h-16 px-6 bg-[#0B0E14]/90 backdrop-blur-md border-b border-[#232A3B] flex items-center justify-between sticky top-0 z-40"
+      },
+      "left_zone": {
+        "name": "Zone 1: Scenario Inputs & Shocks Panel",
+        "flex_width": "w-full lg:w-3/12 space-y-4",
+        "components": [
+          "Market Condition Sliders: Base Demand Index (0-200), Capacity Remaining % (0-100%), Days-to-Arrival (1-90 days), Season Selector (Peak / High / Shoulder / Low), Competitor Avg Rate (₹), Event Flag Toggle",
+          "Preset Demand Shock Buttons: 'Monsoon Slump (-30%)', 'IPL Championship Match (+55%)', 'Tech Summit 2026 (+40%)', 'Flight Cancellation Crisis (+25%)'",
+          "Real-time Parameter Summary Chip Row"
+        ]
+      },
+      "center_zone": {
+        "name": "Zone 2: Rule-Based Optimizer & Monte Carlo Engine",
+        "flex_width": "w-full lg:w-6/12 space-y-4",
+        "components": [
+          "Recommended Price Hero Card: Big ₹ ADR with percentage surge badge (+24.5%), Revenue Impact P50 (₹ Lakhs), and Quick Apply Button",
+          "14-Day Demand Forecast & Booking Pace Line Chart (Recharts / SVG gradient area curve)",
+          "Price Multipliers Breakdown Table/Accordion (Base Rate, Lead Time Factor, Capacity Scarcity Factor, Competitor Benchmark Factor, Event Surge Factor)",
+          "Customer Monte Carlo Simulation Card: Revenue Distribution Histogram with P10 / P50 / P90 quantile pills, Projected Occupancy %, Conversion Rate %",
+          "3-Way Rate Comparison Table (Current Rate vs Recommended Rate vs Competitor Rate)"
+        ]
+      },
+      "right_zone": {
+        "name": "Zone 3: AI Explanation & Ethical Policy Guardrails",
+        "flex_width": "w-full lg:w-3/12 space-y-4",
+        "components": [
+          "Ethical & Policy Warnings Box (Amber non-blocking flags: Surge cap >40% alert, Festival gouging advisory, OTA channel parity check, with mitigation actions)",
+          "LLM Explanation Card ('Why this price?', 'Key market risks', 'Alternative strategy option', interactive AI prompt input box & Re-Generate Insights button)",
+          "Printable Strategy Export Preview trigger modal"
+        ]
+      }
+    }
+  },
+  "key_features_to_implement": [
+    "Interactive Scenario Input Sliders with smooth realtime calculation triggers",
+    "Preset Shock Buttons with immediate visual feedback, subtle sound/flash effect, and badge indicator",
+    "Dynamic 14-Day Forecast Line Chart and Booking Pace Area Chart with dual tooltip comparative metrics",
+    "Hero Recommended Price Card featuring massive 60px INR text visible from 20 feet away on a classroom projector",
+    "Monte Carlo Revenue Simulation Histogram with smooth frequency distribution bars and interactive P10/P50/P90 markers",
+    "Amber Ethical Warning Flags (strictly amber #F59E0B badges and border glow, non-blocking with clear recommendations)",
+    "LLM Explanation Card with typewriter or smooth streaming effect for plain-English explanation, risk breakdown, and alternative recommendations",
+    "3-Way Comparison View (Current vs Recommended vs Competitor) with delta indicators (₹ and %)",
+    "Presenter Mode Auto-Walkthrough: Interactive guided modal overlay with spotlight focus, step-by-step audio/narrative cues for MBA lectures",
+    "Printable Strategy Export: Clean, black-and-white print-optimized strategy executive summary sheet (opens print dialog or full page print layout)"
+  ],
+  "image_urls": {
+    "hotel_hero": "https://images.unsplash.com/photo-1632141021009-a6b6021cde21?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBob3RlbCUyMGRhcmslMjBuaWdodCUyMGFyY2hpdGVjdHVyZSUyMGludGVyaW9yJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc4ODc4MzM4MXww&ixlib=rb-4.1.0&q=85",
+    "hotel_hallway": "https://images.unsplash.com/photo-1610956560576-d4c057f1d467?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3RlbCUyMGRhcmslMjBuaWdodCUyMGFyY2hpdGVjdHVyZSUyMGludGVyaW9yJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc4ODc4MzM4MXww&ixlib=rb-4.1.0&q=85",
+    "hotel_lobby": "https://images.unsplash.com/photo-1625244695851-1fc873f942bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBob3RlbCUyMGxvYmJ5JTIwaW50ZXJpb3IlMjBsaWdodHN8ZW58MHx8fHwxNzg4NzgzMzg5fDA&ixlib=rb-4.1.0&q=85",
+    "hotel_interior": "https://images.unsplash.com/photo-1552925766-63ab07391e02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBob3RlbCUyMGRhcmslMjBuaWdodCUyMGFyY2hpdGVjdHVyZSUyMGludGVyaW9yJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc4ODc4MzM4MXww&ixlib=rb-4.1.0&q=85"
+  },
+  "test_ids": {
+    "header_title": "dashboard-header-title",
+    "currency_toggle": "currency-toggle-button",
+    "presenter_mode_btn": "presenter-mode-toggle-button",
+    "export_pdf_btn": "export-pdf-strategy-button",
+    "reset_scenario_btn": "reset-scenario-button",
+    "slider_base_demand": "base-demand-index-slider",
+    "slider_capacity": "capacity-remaining-slider",
+    "slider_days_to_arrival": "days-to-arrival-slider",
+    "slider_competitor_price": "competitor-price-slider",
+    "shock_btn_monsoon": "shock-preset-monsoon-button",
+    "shock_btn_ipl": "shock-preset-ipl-button",
+    "shock_btn_tech_summit": "shock-preset-tech-summit-button",
+    "recommended_price_hero": "recommended-price-hero-card",
+    "recommended_price_value": "recommended-price-value-text",
+    "forecast_chart": "demand-forecast-line-chart",
+    "monte_carlo_histogram": "monte-carlo-revenue-histogram",
+    "p10_stat": "monte-carlo-p10-stat",
+    "p50_stat": "monte-carlo-p50-stat",
+    "p90_stat": "monte-carlo-p90-stat",
+    "amber_warnings_box": "ethical-policy-warnings-box",
+    "llm_explanation_card": "llm-explanation-card",
+    "comparison_table": "rate-comparison-table",
+    "presenter_overlay": "presenter-mode-walkthrough-overlay"
+  },
+  "instructions_to_main_agent": [
+    "Build a full-featured single-screen dashboard with high visual polish, obsidian background (#080A0F), subtle glassmorphism cards (#11151E), and gold/amber accents.",
+    "Ensure all currency displays use Indian Rupees (₹) e.g., ₹18,450 or ₹14.2 Lakhs.",
+    "Ensure numbers for Recommended Price, P50 Revenue, and Occupancy % are huge (text-5xl or text-6xl) so they are readable on a projector from the back of a classroom.",
+    "Keep ethical policy warnings strictly AMBER (#F59E0B), framed as non-blocking alerts with actionable mitigation strategies.",
+    "Include dynamic Math/Simulation engine for Monte Carlo distribution (1000 simulated iterations producing P10, P50, P90 revenue stats, conversion rate, and occupancy).",
+    "Implement Presenter Mode auto-walkthrough with step-by-step highlighted modal spotlights for classroom teaching.",
+    "Add printable strategy export layout that generates a clean executive summary document when clicked.",
+    "Attach data-testid attributes to all interactive controls and key metrics."
+  ]
+}
